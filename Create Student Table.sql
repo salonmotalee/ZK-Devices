@@ -1,4 +1,12 @@
-If Object_ID('Salonmotalee.Student') IS NULL
+If Object_ID('Salonmotalee') IS NULL
+BEGIN
+    CREATE DATABASE Salonmotalee;
+END
+GO
+
+USE Salonmotalee
+
+If Object_ID('Student') IS NULL
 BEGIN
 CREATE TABLE Student (
   ID BIGINT PRIMARY KEY IDENTITY(1,1),
@@ -9,4 +17,4 @@ CREATE TABLE Student (
   IsActive BIT DEFAULT 0
 );
 END;
-
+GO
